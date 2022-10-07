@@ -1,0 +1,51 @@
+
+@startjson
+{
+	"event": {
+	   "eventID" : [
+	       { "CodedValueType" : "(110112, DCM, Query)"}
+	       ],
+	   "EventActionCode": "E",
+	   "EventDateTime" : "date-time",
+	   "EventOutcomeIndicator": "0",
+	   "EventTypeCode" : [
+	   	{ "CodedValueType" : "not specialized (seems odd)"}
+		],
+	   "traceID" : "asdf",
+	   "parentID" : "lkjl"
+	   },
+	"ActiveParticipant-process issuing query" : {
+	   "UserID" : "UserID of the sending process",
+	   "AlternativeUserID" : "theotherID",
+	   "Username" : "if known",
+	   "UserIsRequestor" : "TRUE",
+	   "RoleIDCode" : [
+	   	{ "CodedValueType" : "(110153, DCM, Source Role ID)"}
+		]
+	   },
+	"ActiveParticipant-process responding to query" : {
+	   "UserID" : "UserID of the responding process",
+	   "AlternativeUserID" : "theotherID",
+	   "Username" : "if known",
+	   "UserIsRequestor" : "FALSE",
+	   "RoleIDCode" : [
+	   	{ "CodedValueType" : "(110152, DCM, Destination Role ID)"}
+		]
+	   },
+	"ParticipatingObject" : {
+	   "ParticipantObjectTypeCode" : 2,
+	   "ParticipantObjectTypeCodeRole" : 3,
+	   "ParticipantObjectIDTypeCode" : [
+	       { "CodedValueType" : "(110181, DCM, SOP Class UID)"}
+	       ],
+	   "ParticipantObjectID" : "sop-class-uid",
+	   "ParticipantObjectQuery" : "big base64binary blob",
+	   "ParticipantObjectDetail" : 
+	       {"TransferSyntax" : "dicom-transfer-syntax-base64"}
+	      
+	   }
+}
+@endjson
+
+
+	   

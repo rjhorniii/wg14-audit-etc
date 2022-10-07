@@ -1,0 +1,48 @@
+
+@startjson
+{
+	"event": {
+	   "eventID" : [
+	       { "CodedValueType" : "(110101, DCM, Audit Log Used)"}
+	       ],
+	   "EventActionCode": "R",
+	   "EventDateTime" : "date-time",
+	   "EventOutcomeIndicator": "0",
+	   "EventTypeCode" : [
+	   	{ "code" : "(110120, DCM, Application Start)"}
+		],
+	   "traceID" : "asdf",
+	   "parentID" : "lkjl",
+	   "childID" : "huh"
+	   },
+	"ActiveParticipant" : {
+	   "UserID" : "thisuser",
+	   "AlternativeUserID" : "theotherID",
+	   "Username" : "if known",
+	   "UserIsRequestor" : "TRUE",
+	   "RoleIDCode" : [
+	   	{ "code" : "unspecified, code that means the person"}
+		]
+	   },
+	"ActiveParticipant" : {
+	   "UserID" : "thatuser",
+	   "AlternativeUserID" : "anotherID",
+	   "Username" : "if known",
+	   "UserIsRequestor" : "FALSE",
+	   "RoleIDCode" : [
+	   	{ "code" : "(unspecific, code that means the process)"}
+		]	   
+	   },
+	"ParticipatingObject" : {
+	   "ParticipantObjectTypeCode" : 2,
+	   "ParticipantObjectTypeCodeRole" : 13,
+	   "ParticipantObjectIDTypeCode" : [
+	       { "code" : "(we, RFC-3881, URI)"}
+	       ],
+	   "ParticipantObjectID" : "URI of the audit log"
+	   }	  
+}
+@endjson
+
+
+	   

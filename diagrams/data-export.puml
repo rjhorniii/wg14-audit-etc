@@ -1,0 +1,67 @@
+
+@startjson
+#highlight "ActiveParticipant-destination" / "NetworkAccessPointTypeCode"
+#highlight  "ActiveParticipant-destination" / "MediaType"
+{
+	"event": {
+	   "eventID" : {
+	       "CodedValueType" : "(110106, DCM, Export)"
+	       },
+	   "EventActionCode": "R",
+	   "EventDateTime" : "date-time",
+	   "EventOutcomeIndicator": "0",
+	   "EventTypeCode" : {
+	   	"CodedValueType" : "not specialized (seems odd)"
+		},
+	   "traceID" : "asdf",
+	   "parentID" : "lkjl",
+	   "childID" : "huh"
+	   },
+	"ActiveParticipant-exporting process" : {
+	   "UserID" : "UserID of the exporting process",
+	   "AlternativeUserID" : "theotherID",
+	   "Username" : "if known",
+	   "UserIsRequestor" : "TRUE",
+	   "RoleIDCode" : {
+	   	"CodedValueType" : "(110153, DCM, Source Role ID)"
+		}
+	   },
+	"ActiveParticipant-destination" : {
+	   "UserID" : "Identify the destination",
+	   "AlternativeUserID" : "anotherID",
+	   "Username" : "if known",
+	   "UserIsRequestor" : "FALSE",
+	   "RoleIDCode" : {
+	   	"CodedValueType" : "(110154, DCM, Destination Media)"
+		},
+	   "NetworkAccessPointTypeCode" : {
+	   	"CodedValueType" : "what do we put here?"
+		},
+	   "NetworkAccessPointID" : "typically a URI or IP/Port",
+	   "MediaType" : {
+	    	"CodedValueType" : "(cpxxxx, DCM, Clipboard Manager)"
+		}
+	   },
+	"ParticipatingObject" : {
+	   "ParticipantObjectTypeCode" : 2,
+	   "ParticipantObjectTypeCodeRole" : 3,
+	   "ParticipantObjectIDTypeCode" : {
+	       "CodedValueType" : "(110180, DCM, Study Instance UID)"
+	       },
+	   "ParticipantObjectID" : "study-instance-uid"
+	   },
+	"more participating objects" : [],
+	"ParticipatingObject-patient" : {
+	    "ParticipantObjectTypeCode" : 1,
+	    "ParticipantObjectTypeCodeRole" : 1,
+	    "ParticipantObjectIDTypeCode" : {
+	        "CodedValueType" : "(2, RFC-3991, Patient Number)"
+	        },
+	    "ParticipantObjectID" : "the patient ID",
+	    "ParticipantObjectName" : "the patient name"
+	   }
+}
+@endjson
+
+
+	   
