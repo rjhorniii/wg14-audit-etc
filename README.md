@@ -1,7 +1,7 @@
 # wg14-audit
  various documents related to improving DICOM audit  
 
-=== Procedures for this repository
+## Procedures for this repository
 
 1. Git based delta can be used for puml, md, adoc, html, etc. documents that are line oriented text only files.  Versioned files is also permitted.
 2. New files with new version numbers shall be used for ms word, xls, xml, and other similar documents that are not line oriented text only files.  Git based delta coding shall not be used.
