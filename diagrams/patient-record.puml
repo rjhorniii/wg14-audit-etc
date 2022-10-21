@@ -1,0 +1,27 @@
+
+@startjson
+{
+	"event": {
+	   "eventID" :
+	       { "CodedValueType" : "(110110, DCM, Patient Record)"},
+	   "EventActionCode": "U",
+	   "EventDateTime" : "date-time",
+	   "EventOutcomeIndicator": "0"
+	},
+	"ActiveParticipant" : {
+	   "UserID" : "UserID of the person modifying the patient record",
+	   "AlternativeUserID" : "theotherID",
+	   "Username" : "if known",
+	   "UserIsRequestor" : "TRUE"
+	   },
+	"ParticipatingObject" : {
+	   "ParticipantObjectTypeCode" : 2,
+	   "ParticipantObjectTypeCodeRole" : 3,
+	   "ParticipantObjectIDTypeCode" : 2,
+	   "ParticipantObjectID" : "patient-id"
+	   }
+}
+@endjson
+
+
+	   

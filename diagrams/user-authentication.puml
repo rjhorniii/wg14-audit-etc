@@ -2,14 +2,16 @@
 @startjson
 {
 	"event": {
-	   "eventID" : { "CodedValueType" : "(110108, DCM, Network Entry)"},
+	   "eventID" :
+	       { "CodedValueType" : "(110114, DCM, User Authentication)"},
 	   "EventActionCode": "E",
 	   "EventDateTime" : "date-time",
 	   "EventOutcomeIndicator": "0",
-	   "EventTypeCode" : { "CodedValueType" : "(110124, DCM, Detach)"}
-	   },
+	   "EventTypeCode" : 
+	   	{ "CodedValueType" : "(110122, DCM, Login)"}
+	},
 	"ActiveParticipant" : {
-	   "UserID" : "UserID of the system",
+	   "UserID" : "UserID of the person that authenticated",
 	   "AlternativeUserID" : "theotherID",
 	   "Username" : "if known",
 	   "UserIsRequestor" : "FALSE"

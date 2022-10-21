@@ -1,0 +1,27 @@
+
+@startjson
+{
+	"event": {
+	   "eventID" :  { "CodedValueType" : "(110109, DCM, Order Record)"},
+	   "EventActionCode": "C",
+	   "EventDateTime" : "date-time",
+	   "EventOutcomeIndicator": "0",
+	   "EventTypeCode" : { "CodedValueType" : "(110122, DCM, Login)"}
+	},
+	"ActiveParticipant" : {
+	   "UserID" : "UserID of the person creating the order",
+	   "AlternativeUserID" : "theotherID",
+	   "Username" : "if known",
+	   "UserIsRequestor" : "TRUE"
+	   },
+	"ParticipatingObject" : {
+	   "ParticipantObjectTypeCode" : 1,
+	   "ParticipantObjectTypeCodeRole" : 1,
+	   "ParticipantObjectIDTypeCode" : 2,
+	   "ParticipantObjectID" : "patient-id"
+	   }
+}
+@endjson
+
+
+	   
