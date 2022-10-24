@@ -2,52 +2,37 @@
 @startjson
 {
 	"event": {
-	   "eventID" : [
-	       { "CodedValueType" : "(110102, DCM, Begin Transferring DICOM Instances)"}
-	       ],
+	   "eventID" : { "CodedValueType" : "(110102, DCM, Begin Transferring DICOM Instances)"},
 	   "EventActionCode": "E",
 	   "EventDateTime" : "date-time",
 	   "EventOutcomeIndicator": "0",
-	   "EventTypeCode" : [
-	   	{ "code" : "not specialized (seems odd)"}
-		],
-	   "traceID" : "asdf",
-	   "parentID" : "lkjl",
-	   "childID" : "huh"
+	   "EventTypeCode" : { "code" : "not specialized (seems odd)"}
 	   },
-	"ActiveParticipant" : {
+	"ActiveParticipant - sending process" : {
 	   "UserID" : "thisuser",
 	   "AlternativeUserID" : "theotherID",
 	   "Username" : "if known",
 	   "UserIsRequestor" : "TRUE",
-	   "RoleIDCode" : [
-	   	{ "code" : "(110153, DCM, Source Role ID"}
-		]
+	   "RoleIDCode" : { "code" : "(110153, DCM, Source Role ID"}
 	   },
-	"ActiveParticipant" : {
+	"ActiveParticipant - receiving process" : {
 	   "UserID" : "thatuser",
 	   "AlternativeUserID" : "anotherID",
 	   "Username" : "if known",
 	   "UserIsRequestor" : "FALSE",
-	   "RoleIDCode" : [
-	   	{ "code" : "(110152, DCM, Destination Role ID)"}
-		]	   
+	   "RoleIDCode" : { "code" : "(110152, DCM, Destination Role ID)"}	   
 	   },
-	"ParticipatingObject" : {
+	"ParticipatingObject - data" : {
 	   "ParticipantObjectTypeCode" : 2,
 	   "ParticipantObjectTypeCodeRole" : 3,
-	   "ParticipantObjectIDTypeCode" : [
-	       { "code" : "(110180, DCM, Study Instance UID)"}
-	       ],
+	   "ParticipantObjectIDTypeCode" : { "code" : "(110180, DCM, Study Instance UID)"},
 	   "ParticipantObjectID" : "study-instance-uid"
 	   },
-	"more participating objects" : [],
-	"ParticipatingObject" : {
+	"more participating objects - data" : [],
+	"ParticipatingObject - patient" : {
 	    "ParticipantObjectTypeCode" : 1,
 	    "ParticipantObjectTypeCodeRole" : 1,
-	    "ParticipantObjectIDTypeCode" : [
-	        { "code" : "(2, RFC-3991, Patient Number)"}
-	        ],
+	    "ParticipantObjectIDTypeCode" : { "code" : "(2, RFC-3991, Patient Number)"},
 	    "ParticipantObjectID" : "the patient ID",
 	    "ParticipantObjectName" : "the patient name"
 	   }

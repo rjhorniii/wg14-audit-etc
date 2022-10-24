@@ -4,9 +4,7 @@
 #highlight  "ActiveParticipant-destination" / "MediaType"
 {
 	"event": {
-	   "eventID" : {
-	       "CodedValueType" : "(110106, DCM, Export)"
-	       },
+	   "eventID" : {"CodedValueType" : "(110106, DCM, Export)"},
 	   "EventActionCode": "R",
 	   "EventDateTime" : "date-time",
 	   "EventOutcomeIndicator": "0",

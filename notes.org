@@ -1,0 +1,20 @@
+This is an org-mode file for my notes
+
+*** Setup plantuml to automatically generate SVG
+    - Use javaw.exe -jar plantuml-1.2022.8.jar -tsvg -gui
+      The "-tsvg" says to generate SVG
+      The -gui brings up the window app that watches a requested directory.
+
+    - 'javaw.exe -jar plantuml-1.2022.8.jar -tsvg <filename>' is the command
+      line to convert a specific filename.
+
+    - WSL/bash has issues with javaw.exe, this needs to be done in
+      Powershell or command window.
+
+*** Revisions to audit log used
+    - What to use for RoleIDCode for the user
+    - What to use for the code for the application process
+    - Is there a coded value to use (rather than "12") that means URI.
+
+      Should we make these changes to the example?  It's correct but
+      rather old formulation for the codes.
