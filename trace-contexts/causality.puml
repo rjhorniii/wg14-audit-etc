@@ -1,5 +1,5 @@
 @startuml
-partition Span-A{
+partition Span-A
 (*)  -->["procedure request"] "action A"
      note right
      Log entries labelled as
