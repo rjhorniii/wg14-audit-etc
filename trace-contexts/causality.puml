@@ -1,0 +1,56 @@
+@startuml
+partition Span-A{
+(*)  -->["procedure request"] "action A"
+     note right
+     Log entries labelled as
+     trace-ID Span-A,
+     span Span-A
+     end note
+  ---> === S1 ===
+  partition Span-B {
+    ---> "Activity B"
+    note right
+    Log entries labelled as
+    trace-ID Span-A,
+    span Span-B
+    trace-state child of span-A
+    end note
+    partition Span-D {
+      ---> "Activity D"
+      note right
+      Logentries labelled as
+      trace-ID Span-A,
+      span Span-B,
+      trace-state child of span-A, span-B
+      end note
+      }
+  }
+  === S1 === ---> "Activity C"
+  note right
+     Log entries labelled as
+     trace-ID Span-A,
+     span Span-A
+  end note
+  partition Span-C
+    ---> === S2 ===
+    partition Span-E {
+       === S2 === ---> "Activity E"
+       note right
+          Log entries labelled as
+          trace-ID Span-A,
+          span Span-E,
+          trace-state child of span-A, span-C
+       end note
+    }
+    partition Span-F {
+       === S2 === ---> "Activity F"
+       note right
+          Log entries labelled as
+          trace-ID Span-A,
+          span Span-F,
+          trace-state child of span-A, span-C
+       end note
+    }
+}
+
+@enduml
