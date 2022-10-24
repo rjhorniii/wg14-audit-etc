@@ -20,7 +20,7 @@ partition Span-A
       note right
       Logentries labelled as
       trace-ID Span-A,
-      span Span-B,
+      span Span-D,
       trace-state child of span-A, span-B
       end note
       }
