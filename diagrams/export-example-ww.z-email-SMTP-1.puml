@@ -1,0 +1,46 @@
+
+@startjson
+{
+	"event": {
+	   "eventID" : {"CodedValueType" : "(110106, DCM, Export)"},
+	   "EventActionCode": "C",
+	   "EventDateTime" : "date-time",
+	   "EventOutcomeIndicator": "0",
+	   "EventTypeCode" : {
+	   	"CodedValueType" : "not specialized (seems odd)"
+		}
+	   },
+	"ActiveParticipant-exporting process" : {
+	   "UserID" : "UserID of the person using application",
+	   "Username" : "Process ID of the application",
+	   "UserIsRequestor" : "TRUE",
+	   "NetworkAccessPointID" : "DOMAIN\\COMPUTER",
+	   "NetworkAccessPointTypeCode" : "1",
+	   "RoleIDCode" : {
+	   	"CodedValueType" : "(110153, DCM, Source Role ID)"
+		}
+	   },
+	"ActiveParticipant-destination email local agent" : {
+	   "UserIsRequestor" : "false",
+	   "RoleIDCode" : {
+	   	"CodedValueType" : "(110154, DCM, Destination Media)"
+		},
+	   "MediaType" : {
+	        "CodedValueType" : "(110037, DCM, Email)"
+		},
+	   "MediaIdentifier" : "Message-ID: unique-message-ID (per RFC2822)"
+	   },
+	"ParticipatingObject-patient" : {
+	    "ParticipantObjectTypeCode" : 1,
+	    "ParticipantObjectTypeCodeRole" : 1,
+	    "ParticipantObjectIDTypeCode" : {
+	        "CodedValueType" : "(2, RFC-3991, Patient Number)"
+	        },
+	    "ParticipantObjectID" : "the patient ID",
+	    "ParticipantObjectName" : "the patient name"
+	   }
+}
+@endjson
+
+
+	   
