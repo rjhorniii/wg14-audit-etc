@@ -21,14 +21,16 @@
 		}
 	   },
 	"ActiveParticipant-destination email local agent" : {
+	   "UserID" : "Message-ID: <unique-ID per RFC2822>",
 	   "UserIsRequestor" : "false",
 	   "RoleIDCode" : {
 	   	"CodedValueType" : "(110154, DCM, Destination Media)"
 		},
-	   "MediaType" : {
+	   "MediaIdentifier" : {
+	      "MediaType" : {
 	        "CodedValueType" : "(110037, DCM, Email)"
-		},
-	   "MediaIdentifier" : "Message-ID: unique-message-ID (per RFC2822)"
+	        }
+	      }
 	   },
 	"ParticipatingObject-patient" : {
 	    "ParticipantObjectTypeCode" : 1,

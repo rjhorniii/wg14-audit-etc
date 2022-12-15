@@ -26,8 +26,10 @@
 	   	"CodedValueType" : "(TBD, DCM, Application)"
 		},
 	   "MediaIdentifier" : {
-	        "CodedValueType" : "(TBD, DCM, Clipboard Manager)"
+	        "MediaType" : {
+		    "CodedValueType" : "(TBD, DCM, Clipboard Manager)"
 		}
+	     }
 	   },
 	"ParticipatingObject-patient" : {
 	    "ParticipantObjectTypeCode" : 1,

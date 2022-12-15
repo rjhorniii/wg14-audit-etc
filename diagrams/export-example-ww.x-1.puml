@@ -21,15 +21,17 @@
 		}
 	   },
 	"ActiveParticipant-destination media" : {
-	   "UserID" : "NTFS",
+	   "UserID" : "file://C:\\Users\\smitty\\Desktop\\image.jpg",
+	   "AlternativeUserID" : "NTFS",
 	   "UserIsRequestor" : "false",
 	   "RoleIDCode" : {
 	   	"CodedValueType" : "(110154, DCM, Destination Media)"
 		},
-	   "MediaType" : {
+	   "MediaIdentifier" : {
+	        "MediaType" : {
 	        "CodedValueType" : "(110037, DCM, URI)"
-		},
-	   "MediaIdentifier" : "file://C:\\Users\\smitty\\Desktop\\image.jpg"
+		}
+	    }
 	   },
 	"ParticipatingObject-patient" : {
 	    "ParticipantObjectTypeCode" : 1,

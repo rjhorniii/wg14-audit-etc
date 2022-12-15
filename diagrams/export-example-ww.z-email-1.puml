@@ -21,14 +21,16 @@
 		}
 	   },
 	"ActiveParticipant-destination email local agent" : {
+	   "UserID" : "mailto://person@example.com",
 	   "UserIsRequestor" : "false",
 	   "RoleIDCode" : {
 	   	"CodedValueType" : "(TBD, DCM, Application)"
 		},
-	   "MediaType" : {
+	   "MediaIdentifier" : {
+	      "MediaType" : {
 	        "CodedValueType" : "(110037, DCM, URI)"
-		},
-	   "MediaIdentifier" : "mailto://person@example.com"
+		}
+	     }
 	   },
 	"ParticipatingObject-patient" : {
 	    "ParticipantObjectTypeCode" : 1,
