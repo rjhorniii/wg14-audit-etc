@@ -14,6 +14,10 @@ Concerns about images:
 
 Digital signatures can help with 1. and 2.  DICOM has some attribute level support for phantoms and calibration, which is part of 3. Provenance becomes extremely complex depending upon how much detail is needed in the provenance.  This partially addresses the concerns with artificially generated or modified images.
 
+## Non-security exclusion
+
+For the special case of intentional authorized generation of SOP instances there may be additions or modifications to attributes.  There are presently attributes describing image processing and enhancement algorithms and quality control images.  Some intentional modifications will fall within their scope.  There are other images that do not, for example synthetic images used for training purposes.  This gets into many operational issues outside the scope of security.  So it will not be further covered here.
+
 ## DICOM Creator RSA Digital signature profile
 
 The Creator RSA Digital signature profile https://dicom.nema.org/medical/dicom/current/output/chtml/part15/sect_C.2.html, is old but it remains relevant.  It details all the attributes of a image storage SOP Instance that are created by the imaging system and that should not normally be modified.  (Derived images from image enhancement were assumed to be a different SOP Instance.)  It specifies that these attributes should be signed, while leaving the remainder unsigned.  This means that information like patient demographics are not signed.
@@ -36,19 +40,19 @@ DICOM has remained silent on key management and certificate management issues.  
 
 There was an introduction made by "Safe Identity" to a system for key management for medical information.  The "Safe Identity" organization was acquired by DirectTrust in 2021.  DirectTrust can be found at: https://directtrust.org/.  At the time we referred them to MITA, because their effort looked much more relevant to trade association activities than to DICOM as an international standard.
 
-The FIDO organization has made substantial progress on systems for providing certificates to the IoT world.  Their approach is relevant to all the imaging systems (CT, Ultrasound, etc.) and to a lesser degree to the workstations.  Their work can be found at: https://fidoalliance.org/internet-of-things/. FIDO got started with the standards for MFA tokens, etc. and their integration into browsers and web servers.  The IoT effort is a second or third stage effort.
+The FIDO organization has made substantial progress on systems for providing certificates to the IoT world.  Their approach is relevant to all the imaging systems (CT, Ultrasound, etc.) and to a lesser degree to the workstations.  Their work can be found at: https://fidoalliance.org/internet-of-things/. FIDO got started with the standards for MFA tokens, etc. and their integration into browsers and web servers.  The IoT effort is a second or third phase effort.
 
 The key used to sign a SOP Instance identifies the signer to some degree.  DICOM has been silent on what identification is appropriate.  The signer may provide provenance information.  
 
-So far I've seen a variety of certificate distribution methods that are appropriate to IoT type devices.  Systems like Let's Encrypt currently expect the client system to be a server or server-like.  They depend on the client updating HTTP accessible information or DNS records.  This makes sense for a system that is designed to provide certificates to web servers.
+So far I've seen a variety of certificate distribution methods that are appropriate to IoT type devices.  Systems like Let's Encrypt currently expect the client system to be a server or server-like.  They depend on the client updating HTTP accessible information or DNS records.  This makes sense for a system that is designed to provide certificates to web servers.  It is not suitable for most IoT systems.
 
 For IoT style devices I've seen:
 1. The vendors of the device installs a vendor-wide signing certificate.  This provides only the vendor of the device as provenance information.  It does not indicate device type, device identification, or owner identification information.
 2. Some vendors have a service activity to provide site and machine specific certificates.  This does provide all that identification information, but the owner cannot revoke or modify that certification.
-3. Some vendors allow machine owners to reference the owner's internal certificate authority for authorizetion or identification.
-4. FIDO is attempting to provide some degree of this information for devices owned and operated by naive consumers.  Their intent is to identify each device uniquely, and accomodate consumer level disabling, sale, and transfer of their devices.
+3. Some vendors allow machine owners to use the owner's internal certificate authority for authorizetion or identification.
+4. FIDO is attempting to provide some of this functionality for devices owned and operated by naive consumers in addition to commercial users.  Their intent is to identify each device uniquely, and accomodate consumer level disabling, sale, and transfer of their devices.
 
-Should DICOM get into this?  Does this better belong with regulators (and thus organizations like MITA, COCIR, and JIRA that represent medical imaging to regulators)?  Should IHE get involved?  Is this not a medical imaging specific problem, and should it be left to the wider industry to solve.
+Should DICOM get into this?  Does this better belong with regulators (and thus organizations like MITA, COCIR, and JIRA that represent medical imaging to regulators)?  Should IHE get involved?  Is this not a medical device specific problem, and should it be left to the wider industry to solve.
 
 ### Relevance to artificially generated or modified images
 
